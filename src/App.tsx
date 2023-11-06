@@ -78,9 +78,12 @@ function App() {
             type="email"
             placeholder="Email Address"
             {...register("email", {
-              pattern:
-                /^[a-zA-Z0-9.! #$%&'*+/=? ^_`{|}~-]+@[a-zA-Z0-9-]+(?:\. [a-zA-Z0-9-]+)*$/,
-              required: "please enter",
+              required: { value: true, message: "Email cannot be empty" },
+              pattern: {
+                value:
+                  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+                message: "Looks like this is not an email",
+              },
             })}
             style={
               errors.email?.message ? { outline: "2px solid #FF7979" } : {}
