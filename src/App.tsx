@@ -28,7 +28,6 @@ function App() {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<DataType>();
 
