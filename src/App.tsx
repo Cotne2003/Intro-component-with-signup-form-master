@@ -1,4 +1,3 @@
-import errorIcon from "/icon-error.svg";
 import { useForm } from "react-hook-form";
 import {
   StyledMain,
